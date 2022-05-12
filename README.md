@@ -38,6 +38,7 @@
 <table>
   <thead>
     <tr>
+      <th>題</th>
       <th>ライブラリ名</th>
       <th>簡単な説明</th>
     </tr>
@@ -45,19 +46,41 @@
   <tbody>
     <tr>
       <td>typescript関連</td>
+      <td>
+        typescript</br>
+        ts-node, ts-node-dev</br>
+        @types/node, @types/express
+      </td>
       <td>タイプスクリプト</td>
     </tr>
     <tr>
       <td>eslint関連</td>
+      <td>
+        eslint, eslint-plugin-import</br>
+        @typescript-eslint/eslint-plugin</br>
+        @typescript-eslint/parser
+      </td>
       <td>静的解析検証ツール</td>
     </tr>
     <tr>
       <td>prettier関連</td>
+      <td>
+        prettier, eslint-config-prettier
+      </td>
       <td>コードフォーマッタでソースコードの自動整形</td>
     </tr>
     <tr>
+      <td>jest関連</td>
+      <td>
+        jest, ts-jest, supertest</br>
+        @types/jest, @types/supertest
+      </td>
+      <td> JavaScript テスティングフレームワーク</td>
+    </tr>
+    <tr>
+      <td>del</td>
       <td>del-cli</td>
-      <td>ファイルを削除するライブラリ. ビルド時に古いファイルを削除する用途に使います。</td>
+      <td>ファイルを削除するライブラリ. ビルド時に古いファイルを削除する用途</td>
     </tr>
   </tbody>
 </table>
@@ -84,4 +107,7 @@
 
 // 静的解析検証ツールのエラー修正とコードのフォーマット
 "format": "eslint ./src/**/*.ts --fix && prettier --write \"./src/**/*.{js,ts}\""
+
+// テスト起動
+"test": "jest --watch --no-cache"
 ```
