@@ -8,8 +8,8 @@
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "start:dev": "cross-env NODE_ENV=development ts-node-dev src/index.ts",
     "start": "cross-env NODE_ENV=production node build/index.js",
-    "lint": "eslint src/**/*.ts",
-    "format": "eslint src/**/*.ts --fix"
+    "lint": "eslint ./src/**/*.ts",
+    "format": "eslint ./src/**/*.ts --fix && prettier --write \"./src/**/*.{js,ts}\""
   },
   "keywords": [],
   "author": "",
@@ -21,7 +21,9 @@
     "@typescript-eslint/parser": "^5.23.0",
     "del-cli": "^4.0.1",
     "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.6.2",
     "ts-node": "^10.7.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.6.4"
